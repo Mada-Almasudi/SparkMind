@@ -1,2 +1,2 @@
 ## SparkMind
-SparkMind is a website designed to help people with ADHD improve their focus through practical techniques and exercises. The platform also includes a supportive community where users can share experiences and encourage each other. Additionally, it features a budget calculator to help users track their expenses and manage their finances effectively.
+[SparkMind](file:///C:/Users/waham/HTML%20Projects/SparkMind/home.html) is a website designed to help people with ADHD improve their focus through practical techniques and exercises. The platform also includes a supportive community where users can share experiences and encourage each other. Additionally, it features a budget calculator to help users track their expenses and manage their finances effectively.
