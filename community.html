@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADHD Community</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js"></script>
+    <style>
+        body {
+            background: linear-gradient(90deg, rgba(99,38,252,1) 0%, rgba(156,51,244,1) 100%);
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            text-align: center;
+        }
+
+        h1 {
+            font-size: 3em;
+            color: #fcfcfc;
+            margin-top: 100px;
+            animation: fadeIn 2s ease-out;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        p {
+            font-size: 1.2em;
+            color: #ecf0f1;
+            margin-top: 10px;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        h2 {
+            color: #e6ebea;
+            font-size: 2em;
+            margin-top: 40px;
+            animation: fadeIn 2s ease-out;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        form {
+            background-color: rgba(208, 221, 230, 0.9);
+            border-radius: 10px;
+            padding: 20px;
+            width: 50%;
+            margin: 30px auto;
+            animation: slideIn 2s ease-out;
+        }
+
+        fieldset {
+            border: none;
+        }
+
+        label {
+            display: block;
+            margin-top: 15px;
+            font-size: 1.1em;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            margin-top: 5px;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+        }
+
+        textarea {
+            height: 150px;
+        }
+
+        input[type="submit"] {
+            background-color: #f5d7a8;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            border-radius: 5px;
+            margin-top: 15px;
+            font-size: 1.1em;
+            transition: background-color 0.3s;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #e67e22;
+        }
+
+        table {
+            margin: 30px auto;
+            border-collapse: collapse;
+            width: 80%;
+            animation: fadeIn 2s ease-out;
+        }
+
+        th, td {
+            padding: 15px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+
+        th {
+            background-color: #88bbb0;
+            color: white;
+        }
+
+        td {
+            background-color: #b2beca;
+        }
+
+        iframe {
+            border: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+            margin-top: 30px;
+            width: 80%;
+            height: 400px;
+        }
+
+        ul {
+            list-style-type: none;
+            padding: 0;
+            margin: 20px auto;
+            width: 70%;
+        }
+
+        li {
+            font-size: 1.1em;
+            margin: 10px 0;
+            font-family: 'Montserrat', sans-serif;
+        }
+
+        .highlight {
+            color: #f0b557;
+            font-weight: bold;
+        }
+
+        @keyframes fadeIn {
+            0% { opacity: 0; }
+            100% { opacity: 1; }
+        }
+
+        @keyframes slideIn {
+            0% { transform: translateX(100%); }
+            100% { transform: translateX(0); }
+        }
+    </style>
+</head>
+<body>
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="images/LOGO.png" alt="SparkMind Logo">
+        </a>
+        <ul >
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="focus.html">Focus Buddy</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="budget.html">Budget</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="habits.html">Habits</a></li>
+            <li><a href="mind.html">mind</a></li>
+            <li><a href="productivity.html">Productivity</a></li>
+        </ul>
+    </nav>
+    <div class="navbar-space"></div> <!-- Space below navbar -->
+    <div>
+        <h1>🌍 Welcome to the ADHD Community 🌍</h1>
+        <p>Join our supportive community, share experiences, and connect with others who understand your journey.</p>
+    </div>
+
+    <h2>📢 Community Forum</h2>
+    <p>Ask questions, share tips, and discuss ADHD-related topics.</p>
+    
+    <form id="community-form">
+        <fieldset>
+            <legend>📝 Create a New Post</legend>
+            
+            <label for="username">👤 Name:</label>
+            <input type="text" id="username" name="username" required>
+            
+            <label for="topic">📌 Topic:</label>
+            <input type="text" id="topic" name="topic" required>
+            
+            <label for="message">💬 Message:</label>
+            <textarea id="message" name="message" required></textarea>
+            
+            <input type="submit" value="🚀 Post">
+        </fieldset>
+    </form>
+    
+    <h2>💡 Community Guidelines</h2>
+    <ul>
+        <li><span class="highlight">Be respectful and supportive.</span></li>
+        <li><span class="highlight">No spam or self-promotion.</span></li>
+        <li><span class="highlight">Share only ADHD-related experiences and advice.</span></li>
+        <li><span class="highlight">Report any inappropriate behavior.</span></li>
+    </ul>
+
+    <h2>🌍 Community Highlights</h2>
+    <table>
+        <tr>
+            <th>Feature</th>
+            <th>Description</th>
+        </tr>
+        <tr>
+            <td>Live Discussions</td>
+            <td>Join real-time chats and share insights instantly.</td>
+        </tr>
+        <tr>
+            <td>Expert Advice</td>
+            <td>Learn from ADHD specialists and professionals.</td>
+        </tr>
+    </table>
+
+    <h2>🔗 Useful Resources</h2>
+    <iframe src="https://www.adhdawarenessmonth.org/"></iframe>
+</body>
+</html>

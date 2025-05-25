@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>About Us</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      background: linear-gradient(90deg, rgba(99,38,252,1) 0%, rgba(156,51,244,1) 100%);
+      font-family: 'Montserrat', sans-serif;
+      color: white;
+      text-align: center;
+    }
+
+    .fade-in {
+      opacity: 0;
+      transform: translateY(30px);
+      transition: all 0.6s ease;
+    }
+
+    .visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .heart {
+      position: absolute;
+      color: pink;
+      font-size: 20px;
+      animation: float 2s ease-in-out forwards;
+    }
+
+    @keyframes float {
+      0% { opacity: 1; transform: translateY(0); }
+      100% { opacity: 0; transform: translateY(-100px); }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="home.html" class="logo">
+      <img src="images/LOGO.png" alt="SparkMind Logo">
+    </a>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="focus.html">Focus Buddy</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="budget.html">Budget</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="habits.html">Habits</a></li>
+      <li><a href="mind.html">Mind</a></li>
+      <li><a href="productivity.html">Productivity</a></li>
+    </ul>
+  </nav>
+
+  <div class="navbar-space"></div>
+
+  <!-- Mission Title -->
+  <h1 id="missionTitle" style="font-size: 50px; margin-top: 60px;">
+    Our Mission
+  </h1>
+
+  <!-- Mission Subtitle -->
+  <h2 class="fade-in" style="font-size: 22px; max-width: 800px; margin: 10px auto; line-height: 1.6;">
+    Empower you to take control of your life with effective strategies, tools, and a supportive community.
+  </h2>
+
+  <br><br>
+
+  <!-- Content Container -->
+  <div style="display: flex; justify-content: center; align-items: center; gap: 50px; padding: 40px;">
+
+    <!-- Text Section -->
+    <div class="fade-in" style="max-width: 600px; background: rgba(255, 255, 255, 0.9); color: black; padding: 30px; border-radius: 15px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.2); text-align: left;">
+      <h2 style="font-size: 28px; color: rgb(99,38,252);">Here’s how we make that happen:</h2>
+      <ul style="font-size: 18px; line-height: 1.8;">
+        <li><strong>Focus Tools:</strong> We offer tools like the Pomodoro Timer and Body Doubling that allow you to structure your time effectively.</li>
+        <li><strong>Practical Tips:</strong> SparkMind provides easy-to-apply strategies for time management, task organization, and daily routines.</li>
+        <li><strong>Supportive Community:</strong> A welcoming space where individuals with ADHD can share experiences and advice.</li>
+      </ul>
+    </div>
+
+    <!-- Image Section -->
+    <img id="aboutImage" src="images/2.1.png" alt="SparkMind Image"
+         style="width: 450px; height: auto; border-radius: 10px; box-shadow: 5px 5px 15px rgba(0, 0, 0, 0.3); transition: transform 0.3s ease-in-out;"
+         onmouseover="this.style.transform='scale(1.05)'" onmouseout="this.style.transform='scale(1)'">
+  </div>
+
+  <footer>
+    <p>&copy; 2025 SparkMind. All rights reserved.</p>
+  </footer>
+
+  <!-- Internal JavaScript -->
+  <script>
+    // Fade-in animation on scroll
+    const fadeElements = document.querySelectorAll('.fade-in');
+    const revealOnScroll = () => {
+      fadeElements.forEach(el => {
+        const rect = el.getBoundingClientRect();
+        if (rect.top < window.innerHeight - 50) {
+          el.classList.add('visible');
+        }
+      });
+    };
+    window.addEventListener('scroll', revealOnScroll);
+    revealOnScroll(); // trigger on load
+
+    // Floating hearts on mission title hover
+    const title = document.getElementById('missionTitle');
+    title.addEventListener('mouseenter', () => {
+      for (let i = 0; i < 5; i++) {
+        const heart = document.createElement('div');
+        heart.classList.add('heart');
+        heart.textContent = "♥";
+        heart.style.left = `${Math.random() * window.innerWidth}px`;
+        heart.style.top = `${title.offsetTop}px`;
+        document.body.appendChild(heart);
+        setTimeout(() => heart.remove(), 2000);
+      }
+    });
+
+    // Click image to show a random motivational quote
+    const image = document.getElementById('aboutImage');
+    const quotes = [
+      "Small steps every day lead to big change.",
+      "Progress, not perfection.",
+      "You’re doing better than you think.",
+      "Breathe. Reset. Go again.",
+      "Focus on your strengths, not your flaws."
+    ];
+    image.addEventListener('click', () => {
+      const quote = quotes[Math.floor(Math.random() * quotes.length)];
+      alert(quote);
+    });
+  </script>
+
+</body>
+</html>

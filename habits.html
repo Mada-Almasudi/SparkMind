@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Daily Routines & Habit Builder</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+</head>
+<body>
+    <header>
+        <nav>
+            <a href="home.html" class="logo">
+                <img src="images/LOGO.png" alt="SparkMind Logo">
+            </a>
+            <ul>
+                <li><a href="home.html">Home</a></li>
+                <li><a href="about_us.html">About Us</a></li>
+                <li><a href="focus.html">Focus Buddy</a></li>
+                <li><a href="tips.html">Tips</a></li>
+                <li><a href="budget.html">Budget</a></li>
+                <li><a href="community.html">Community</a></li>
+                <li><a href="habits.html">Habits</a></li>
+                <li><a href="mind.html">Mind</a></li>
+                <li><a href="productivity.html">Productivity</a></li>
+            </ul>
+        </nav>
+        <div class="navbar-space"></div>
+    </header>
+
+    <section class="main-contents">
+        <h1 align="center">
+            <font size="7">
+                Build Your ADHD-Friendly Routine
+            </font>
+        </h1>
+        
+        <p>Use structured routines to enhance focus and reduce overwhelm. A little change can lead to a big difference!</p>
+        <br><br><br>
+        <img src="images/habits.png" alt="Habit Building">
+
+        <!-- Add Habit Form -->
+        <form id="habit-form" class="adds-habit-form">
+            <input type="text" id="habit-input" placeholder="Enter a new habit or task..." />
+            <button type="button" class="action-btn">Add Habit</button>
+        </form>
+
+        <!-- Habit List -->
+        <h2>Your Daily Routine</h2>
+        <ul class="steps-list">
+            <li class="habit-item">
+                <input type="checkbox" id="habit1">
+                <label for="habit1">Morning exercise</label>
+                <span class="delete-btn">X</span>
+            </li>
+            <li class="habit-item">
+                <input type="checkbox" id="habit2">
+                <label for="habit2">Read a book</label>
+                <span class="delete-btn">X</span>
+            </li>
+            <li class="habit-item">
+                <input type="checkbox" id="habit3">
+                <label for="habit3">Practice meditation</label>
+                <span class="delete-btn">X</span>
+            </li>
+        </ul>
+    </section>
+
+    <br><br><br><br>
+    <footer>
+        <p>&copy; 2025 SparkMind. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Budget & Expense Tracker</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+
+    <style>
+    
+        /* General Body and Background */
+        body {
+            background: linear-gradient(90deg, rgba(99,38,252,1) 0%, rgba(156,51,244,1) 100%);
+            font-family: 'Montserrat', sans-serif;
+            color: white;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            text-align: center;
+        }
+
+        /* Add space below the navbar */
+        .navbar-space {
+            height: 80px;
+        }
+
+        h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+            text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+        }
+
+        p {
+            font-size: 1.2em;
+            margin-bottom: 20px;
+        }
+
+        /* Form Container Styling */
+        form {
+            background: linear-gradient(135deg, rgba(220, 220, 220, 1), rgba(245, 245, 245, 1));
+            border-radius: 15px;
+            width: 80%;
+            max-width: 500px;
+            padding: 30px;
+            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        form:hover {
+            transform: scale(1.05);
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+        }
+
+        fieldset {
+            border: none;
+            padding: 20px;
+            border-radius: 10px;
+            background-color: rgba(255, 255, 255, 0.8);
+        }
+
+        legend {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            color: rgb(99,38,252);
+            border-bottom: 3px solid rgb(99,38,252);
+        }
+
+        label {
+            display: block;
+            margin: 10px 0;
+            font-size: 1.2em;
+            color: #333;
+        }
+
+        input[type="number"],
+        input[type="text"],
+        input[type="date"],
+        textarea {
+            width: 100%;
+            padding: 12px;
+            margin: 5px 0 20px;
+            font-size: 1em;
+            border-radius: 5px;
+            border: 2px solid rgb(99,38,252);
+            background-color: white;
+            color: black;
+            box-shadow: inset 2px 2px 8px rgba(0, 0, 0, 0.1);
+        }
+
+        input[type="submit"] {
+            background: linear-gradient(90deg, rgb(99,38,252), rgb(156,51,244));
+            color: white;
+            border: none;
+            padding: 15px 30px;
+            font-size: 1.2em;
+            font-weight: bold;
+            cursor: pointer;
+            border-radius: 5px;
+            width: 100%;
+            transition: background 0.3s ease, transform 0.2s;
+        }
+
+        input[type="submit"]:hover {
+            background: linear-gradient(90deg, rgb(156,51,244), rgb(99,38,252));
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="images/LOGO.png" alt="SparkMind Logo">
+        </a>
+        <ul >
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="focus.html">Focus Buddy</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="budget.html">Budget</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="habits.html">Habits</a></li>
+            <li><a href="mind.html">Mind</a></li>
+            <li><a href="productivity.html">Productivity</a></li>
+        </ul>
+    </nav>
+    <div class="navbar-space"></div> <!-- Space below navbar -->
+    <br /><br /><br />
+    <h1>Budget & Expense Tracker</h1>
+
+   
+    <img src="images/budget.png" alt="Budget Image" style="width: 200px; margin-bottom: 20px;">
+
+    <p>Use this form to track your expenses and manage your budget effectively.</p>
+    
+    <form id="budget-form">
+        <fieldset>
+            <legend>Budget Details</legend>
+
+            <label for="income">Monthly Income:</label>
+            <input type="number" id="income" name="income" required>
+
+            <label for="expense">Expense Category:</label>
+            <input type="text" id="expense" name="expense" required>
+
+            <label for="amount">Amount Spent:</label>
+            <input type="number" id="amount" name="amount" required>
+
+            <label for="date">Date:</label>
+            <input type="date" id="date" name="date" required>
+
+            <label for="notes">Notes (optional):</label>
+            <textarea id="notes" name="notes"></textarea>
+
+            <input type="submit" value="Add Expense">
+        </fieldset>
+    </form>
+</body>
+<br /><br /><br /><br />
+    <footer>
+        <p>&copy; 2025 SparkMind. All rights reserved.</p>
+    </footer>
+</html>

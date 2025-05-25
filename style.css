@@ -1,0 +1,582 @@
+/* General Styles */
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap');
+
+body {
+    background: linear-gradient(90deg, rgba(99,38,252,1) 0%, rgba(156,51,244,1) 100%);
+    font-family: 'Montserrat', sans-serif;
+    color: white;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    text-align: center;
+}
+
+h1, h2 {
+    color: #f8f7f2;
+    text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+}
+/*اخر شيء اضفت البار ستايل هنا عشان اضيف الكود حقه بكل صفحة بعدين اشبك كل صفحة معه  */
+
+      /* Navbar Styling */
+nav {
+    background-color: white; /* White background */
+    padding: 10px 20px; /* Add some padding around the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for a floating effect */
+    position: fixed; /* Fix the navbar at the top */
+    top: 0; /* Position it at the very top */
+    left: 0; /* Align it to the left of the screen */
+    width: 100%; /* Make the navbar take the full width */
+    z-index: 1000; /* Ensure it's above other content */
+    margin-bottom: 40px; /* Add some space below the navbar */
+}
+
+nav .logo img {
+    height: 80px; /* Adjust logo size */
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between the menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Dark gray text color */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+nav ul li a:hover {
+    color: #874caf; /* Change text color on hover */
+}
+.navbar-space {
+    height: 150px;
+}
+
+    
+/* ------------------------Footer------------------------------------------ */
+/* Footer Styling */
+footer {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #d9d9d9;
+    color: rgb(143, 141, 141);
+    text-align: center;
+    font-size: 10px;
+    width: 100%;
+}
+
+
+/*--------------------------------------------- Home page---------------------------------- */
+
+/* Buttons Section (White Background) */
+.section-container {
+    background: #fff; /* White Background for the Section */
+    padding: 50px;
+    
+    margin: 50px auto; /* Adds space around the section */
+    width: 95%; /* Makes sure the container takes the full width of the page */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+    overflow: hidden; /* Avoids overflow in case of shadow */
+    position: relative;
+}
+
+/* Container for Progress Items */
+.container {
+    display: flex;
+    justify-content: space-evenly; /* توزيع الأشكال مع مسافة متساوية بينها */
+    align-items: center;          /* محاذاة العناصر عموديًا في المنتصف */
+    gap: 20px;                    /* مسافة بين العناصر */
+    flex-wrap: wrap;              /* يسمح بتوزيع العناصر عبر أسطر جديدة إذا كانت الشاشة صغيرة */
+    width: 100%;                  /* عرض الحاوية بالكامل */
+}
+
+/* Individual Progress Box */
+.progress-box {
+    text-align: center;  /* محاذاة النص في المنتصف */
+    width: 200px;        /* عرض ثابت لكل عنصر */
+    flex-grow: 1;         /* ضمان توسع العنصر حسب المساحة */
+    flex-basis: 200px;    /* لضبط الحجم الأولي */
+    display: flex;
+    flex-direction: column; /* ترتيب العناصر عموديًا */
+    justify-content: center; /* توسيط العناصر داخل الصندوق */
+    align-items: center;     /* محاذاة العناصر بشكل مركزي */
+}
+
+/* Title and Text Styling */
+.progress-title {
+    font-weight: bold;
+    font-size: 18px;
+    margin-top: 10px;
+    color: #333;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.progress-text {
+    font-size: 18px;
+    color: #555;
+    font-family: 'Montserrat', sans-serif;
+    margin-top: 10px; /* إضافة مسافة بين الشكل والنص */
+}
+
+/* Circular Progress Bar */
+.progress-circle {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    background: conic-gradient( rgba(99,38,252,1)var(--progress), #ddd var(--progress));
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.15); /* Adding shadow for depth */
+    transition: transform 0.3s ease-in-out;
+    border: 10px solid #fff; /* Outer white border to match the image */
+    background-clip: content-box; /* Ensures background fills inside the border */
+    
+}
+
+.progress-circle::after {
+    content: "";
+    width: 90px;
+    height: 90px;
+    background: white;
+    border-radius: 50%;
+    position: absolute;
+}
+
+/* Progress Value Styling */
+.progress-value {
+    position: relative;
+    font-size: 28px;
+    font-weight: bold;
+    color: rgba(99,38,252,1);
+    z-index: 2; /* Ensures number stays above the progress bar */
+    text-shadow: 0 2px 4px rgba(0, 0, 0, 0.2); /* Text shadow for better readability */
+     font-family: "Garamond"
+}
+
+/* Bar Chart Progress */
+.progress-bars {
+    display: flex;
+    gap: 8px;
+    justify-content: center;
+    align-items: flex-end;
+    height: 140px;
+}
+
+.bar {
+    width: 20px;
+    background: linear-gradient(to top, rgba(99,38,252,1), rgba(99,38,252,1));
+    border-radius: 10px;
+    animation: fill-bar 2s ease-out forwards; /* Animation for bar fill */
+}
+
+.bar:nth-child(1) { height: 30%; animation-delay: 0.3s; }
+.bar:nth-child(2) { height: 50%; animation-delay: 0.5s; }
+.bar:nth-child(3) { height: 80%; animation-delay: 0.7s; }
+
+@keyframes fill-bar {
+    0% {
+        height: 0;
+    }
+    100% {
+        height: 100%;
+    }
+}
+
+/* Hover Effect for Buttons (Glow effect) */
+.progress-circle:hover, .bar:hover {
+    box-shadow: 0 0 15px  rgba(99,38,252,1), 0 0 20px rgba(99,38,252,1); /* Glowing effect */
+    transform: scale(1.1); /* Slightly enlarge on hover */
+}
+
+/*--------------------------------------------- Habits page---------------------------------- */
+/* Main Content Section */
+.main-contents {
+    margin-top: 100px; /* Push content down to avoid overlap with navbar */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+
+.adds-habit-form {
+    margin-bottom: 30px;
+}
+
+.adds-habit-form input {
+    padding: 10px;
+    width: 80%;
+    max-width: 400px;
+    margin-right: 10px;
+    border: 2px solid #050505;
+    border-radius: 5px;
+    font-size: 1.1em;
+}
+
+.adds-habit-form button {
+    padding: 10px 20px;
+    background-color: #f0f9f1;
+    color:#999; /* Change color of completed task */
+    border: 2px solid #050505;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1.1em;
+    transition: background-color 0.3s;
+}
+
+.adds-habit-form button:hover {
+    background-color: #c2c9c2; /* Change color on hover */
+}
+
+/* Steps list */
+.steps-list {
+    list-style-type: none;
+    padding: 0;
+    max-width: 600px;
+    margin: 0 auto;
+    text-align: left;
+    font-size: 1.2em;
+    color: #faf2f2;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.steps-list li {
+    display: flex;
+    align-items: center;
+    margin-bottom: 15px;
+    font-size: 1.1em;
+}
+
+.steps-list li input {
+    margin-right: 10px;
+}
+
+.steps-list li label {
+    flex-grow: 1;
+}
+
+.steps-list li input:checked + label {
+    text-decoration: line-through; /* Strike-through text for completed tasks */
+    color: #999; /* Change color of completed task */
+}
+
+.steps-list li .delete-btn {
+    background-color: #ff5733;
+    color: white;
+    border: none;
+    padding: 5px 10px;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 0.9em;
+    display: none; /* Initially hide delete button */
+    transition: background-color 0.3s ease; /* Smooth transition on hover */
+}
+
+.steps-list li:hover .delete-btn {
+    display: block; /* Show delete button on hover */
+}
+
+.steps-list li .delete-btn:hover {
+    background-color: #e04e2b; /* Change color on hover */
+}
+
+/* Save Routine Button */
+#save-routine-btn {
+    padding: 12px 25px;
+    background-color: #f4f8f5;
+    color: white;
+    font-size: 1.2em;
+    border: none;
+    border-radius: 30px;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    margin-top: 30px;
+}
+
+#save-routine-btn:hover {
+    background-color: #f9fdf9; /* Button color change on hover */
+    transform: translateY(-5px); /* Slight movement effect on hover */
+}
+
+/*--------------------------------------------- Mind page---------------------------------- */
+
+
+/* Main Section */
+.main-section {
+    margin-top: 100px; /* Push content down to avoid overlap with navbar */
+    text-align: center;
+    padding: 40px 20px;
+}
+
+
+
+
+
+
+.center-images {
+    width: 80%;
+    max-width: 600px;
+
+}
+
+/* Relaxation Techniques List */
+.relaxation-list {
+    list-style-type: none;
+    padding: 0;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.relaxation-item {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.technique-box {
+    background-color: #ffffff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+    width: 90%;
+    max-width: 350px;
+    text-align: center;
+}
+
+.technique-box:hover {
+    transform: translateY(-10px); /* Hover effect to lift the box */
+}
+
+.technique-box h4 {
+    font-size: 1.8em;
+    color: #0b0a0b;
+    margin-bottom: 10px;
+}
+
+.technique-box p {
+    font-size: 1em;
+    color: #666;
+    margin-bottom: 20px;
+}
+
+.start-btn {
+    padding: 12px 20px;
+    background: linear-gradient(90deg, rgb(99,38,252), rgb(156,51,244));
+
+    color: white;
+    font-size: 1.1em;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #45a049; /* Change background color on hover */
+}
+
+/* لحجم شاشة الجوال */
+@media (max-width: 768px) {
+    .relaxation-list {
+        grid-template-columns: 1fr; /* Single column layout on smaller screens */
+    }
+
+    .section-title {
+        font-size: 2em;
+    }
+
+    .intro-text {
+        font-size: 1.1em;
+    }
+
+    .start-btn {
+        font-size: 1em;
+    }
+}
+/*--------------------------------------------- Productivity page---------------------------------- */
+
+/* Main Section */
+.productivity-section {
+    margin-top: 100px; /* Push content down to avoid overlap with navbar */
+    text-align: center;
+    padding: 40px 20px;
+    margin-bottom: 50px; /* Add space at the bottom of the section */
+    transition: all 0.5s ease; /* Smooth transition for the section */
+}
+
+.productivity-section:hover {
+    transform: translateY(10px); /* Hover effect for the section */
+}
+
+
+
+
+
+
+.center-image-pro {
+    width: 60%;
+    max-width: 600px;
+   
+}
+
+
+/* Table Styling */
+.productivity-table {
+    width: 80%;
+    margin: 0 auto;
+    border-collapse: collapse;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.1);
+}
+
+.productivity-table th, .productivity-table td {
+    padding: 12px;
+    text-align: center;
+    border: 1px solid #080808;
+    
+}
+
+.productivity-table th {
+    background-color: #d9d9d9;
+    color: rgb(16, 10, 10);
+    font-size: 1.2em;
+    font-family: 'Montserrat', sans-serif;
+}
+
+.productivity-table td {
+    background-color: #f9f9f9;
+    font-size: 1.1em;
+    color: rgb(16, 10, 10);
+    font-family: 'Montserrat', sans-serif;
+}
+
+.productivity-table tr:hover {
+    background-color: #e2f0e2; /* Hover effect for table rows */
+}
+
+
+
+/* لشاشة الجوالل */
+@media (max-width: 768px) {
+   
+    
+    .intro-text {
+        font-size: 1.1em;
+    }
+    
+    .productivity-table {
+        width: 90%;
+    }
+    
+    .subheading {
+        font-size: 1.8em;
+    }
+}
+/*--------------------------------------------- focus page---------------------------------- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+ 
+  h3 {
+    margin-bottom: 40px;
+    font-size: 20px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    color: rgb(24, 23, 23);
+  }
+  
+  
+  
+  .cards-wrapper {
+    display: flex;
+    justify-content: space-between;
+    gap: 50px;
+    flex-wrap: wrap;
+  }
+  
+  .cards {
+    background-color: white;
+    color: #c21af0;
+    width: 220px;
+    padding: 20px;
+    border-radius: 15px;
+    text-align: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+  }
+  
+  .cards:hover {
+    transform: translateY(-10px);
+  }
+  
+  .cards img {
+    width: 100px;
+    height: 100px;
+    margin-bottom: 20px;
+  }
+  
+  .cards h2 {
+    font-size: 1.2rem;
+    margin-bottom: 20px;
+  }
+  
+  button {
+    padding: 10px 20px;
+    background: linear-gradient(90deg, rgb(99,38,252), rgb(156,51,244));
+    color: white;
+    border: none;
+    border-radius: 10px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  button:hover {
+    background-color: #a82fc6;
+  }
+
+ /* ------------------------------------------------*/
+
+ .emoji-sparkle {
+    position: absolute;
+    font-size: 18px;
+    animation: sparkle-pop 1s ease-out forwards;
+    pointer-events: none;
+    user-select: none;
+    z-index: 9999;
+  }
+  
+  @keyframes sparkle-pop {
+    0% {
+      transform: scale(1) translateY(0);
+      opacity: 1;
+    }
+    100% {
+      transform: scale(1.8) translateY(-30px);
+      opacity: 0;
+    }
+  }
+  
+  
+  
+  

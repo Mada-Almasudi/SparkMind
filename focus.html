@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Focus Buddy</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Fade-in effect */
+        .fade-in {
+            opacity: 0;
+            transform: translateY(30px);
+            transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+        }
+
+        .fade-in.visible {
+            opacity: 1;
+            transform: translateY(0);
+        }
+
+        /* Button hover effect */
+        .cards button {
+            background-color: #6326FC;
+            color: white;
+            border: none;
+            padding: 10px 18px;
+            border-radius: 20px;
+            font-weight: bold;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+
+        .cards button:hover {
+            background-color: #4b1dc2;
+            transform: scale(1.05);
+        }
+
+        /* Card styling (optional tweak) */
+        .cards-wrapper {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 30px;
+        }
+
+        .cards {
+            background: white;
+            border-radius: 20px;
+            padding: 20px;
+            text-align: center;
+            width: 220px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        }
+
+        .cards img {
+            width: 100px;
+            margin-bottom: 10px;
+        }
+
+        body {
+            background-color: #6326FC;
+            font-family: sans-serif;
+            color: white;
+        }
+
+        h1#animated-title {
+            text-align: center;
+            font-size: 48px;
+            margin-bottom: 40px;
+        }
+    </style>
+</head>
+
+<body>
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="images/LOGO.png" alt="SparkMind Logo">
+        </a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="focus.html">Focus Buddy</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="budget.html">Budget</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="habits.html">Habits</a></li>
+            <li><a href="mind.html">mind</a></li>
+            <li><a href="productivity.html">Productivity</a></li>
+        </ul>
+    </nav>
+
+    <div class="navbar-space"></div>
+    <br><br><br>
+
+    <!-- Animated Title -->
+    <h1 id="animated-title"></h1>
+
+    <br><br>
+
+    <div align="center">
+        <img src="images/focus.png" alt="focus Image" style="width: 300px;" class="fade-in">
+    </div>
+
+    <br><br>
+    <h1 align="center">
+        <font color="white" size="7">Try Our Interactive Cards</font>
+    </h1>
+    <br><br>
+
+    <div class="cards-wrapper">
+        <div class="cards fade-in">
+            <img src="images/a.png" alt="Pomodoro">
+            <h3>POMODORO</h3>
+            <a href="https://pomofocus.io/" target="_blank">
+                <button>Try Now</button>
+            </a>
+        </div>
+
+        <div class="cards fade-in">
+            <img src="images/b.png" alt="Task Lists">
+            <h3>TASK LISTS</h3>
+            <a href="https://2doli.st/" target="_blank">
+                <button>Try Now</button>
+            </a>
+        </div>
+
+        <div class="cards fade-in">
+            <img src="images/c.png" alt="Body Doubling">
+            <h3>BODY DOUBLING</h3>
+            <a href="https://www.focusmate.com/" target="_blank">
+                <button>Try Now</button>
+            </a>
+        </div>
+
+        <div class="cards fade-in">
+            <img src="images/d.png" alt="Tracker">
+            <h3>PROGRESS TRACKER</h3>
+            <a href="https://clockify.me/goal-tracker" target="_blank">
+                <button>Try Now</button>
+            </a>
+        </div>
+    </div>
+
+    <br><br><br><br>
+
+    <footer>
+        <p>&copy; 2025 SparkMind. All rights reserved.</p>
+    </footer>
+
+    <!-- JavaScript for Typing + Scroll Animations -->
+    <script>
+        // Typing animation for "Stay Focused"
+        const title = "Stay Focused";
+        let i = 0;
+        const typingSpeed = 80;
+        function typeTitle() {
+            if (i < title.length) {
+                document.getElementById("animated-title").innerHTML += title.charAt(i);
+                i++;
+                setTimeout(typeTitle, typingSpeed);
+            }
+        }
+        window.onload = typeTitle;
+
+        // Fade-in on scroll
+        const faders = document.querySelectorAll('.fade-in');
+
+        const appearOnScroll = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.1
+        });
+
+        faders.forEach(el => {
+            appearOnScroll.observe(el);
+        });
+    </script>
+</body>
+</html>

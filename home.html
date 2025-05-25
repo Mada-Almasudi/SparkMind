@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <title>Home - SparkMind</title>
+    <link rel="stylesheet" href="style.css">
+    <style>
+        .auth-buttons {
+            margin-top: 80px;
+            left: -40px;
+            position:  relative;  /* Allow precise positioning */
+   
+            
+        }
+
+        .auth-buttons a {
+            text-decoration: none;
+            padding: 12px 24px;
+            margin-right: 10px;
+            background-color: white;
+            color: #6326FC;
+            font-weight: bold;
+            border-radius: 25px;  
+            border: 2px solid #6326FC;
+            transition: background-color 0.3s, color 0.3s;
+        }
+
+        .auth-buttons a:hover {
+            background-color: #6326FC;
+            color: white;
+        }
+    </style>
+    
+</head>
+<body>
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="images/LOGO.png" alt="SparkMind Logo">
+        </a>
+        <ul >
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="focus.html">Focus Buddy</a></li>
+            <li><a href="tips.html">Tips</a></li>
+            <li><a href="budget.html">Budget</a></li>
+            <li><a href="community.html">Community</a></li>
+            <li><a href="habits.html">Habits</a></li>
+            <li><a href="mind.html">mind</a></li>
+            <li><a href="productivity.html">Productivity</a></li>
+        </ul>
+    </nav>
+    <div class="navbar-space"></div> <!-- Space below navbar -->
+    <table border="0" width="1500" height="400">
+        <tr>
+            <td width="40" height="400"></td>
+            <td width="400" height="500">
+                <h1   id="typed-title" style="text-align: left"><font color="white"></font></h1>
+                <p  id="typed-subtitle" style="text-align: left"><font color="white" size="5">Your Support for Managing Life with ADHD</font></p>
+                <p  id="typed-subtitle" style="text-align: left"><font color="white" size="5">At SparkMind, we understand that life with ADHD comes with its challenges...</font></p>
+            
+            <div class="auth-buttons">
+                    <a href="login.html">Login</a>
+                    <a href="signup.html">Sign Up</a>
+            
+                </div>
+            </td>
+            <td width="200" height="400"><img src="images/1.1.png" alt="SparkMind Image"></td>
+        </tr>
+    </table>
+
+    <br /><br /><br /><br /><br /><br /><br /><br />
+
+     <!-- White Background Section for Buttons -->
+    <div class="section-container">
+        <div class="container">
+
+            <!-- First Progress Circle -->
+            <div class="progress-box">
+                <div class="progress-circle" style="--progress: 88%;">
+                    <span class="progress-value">88%</span>
+                </div>
+                <div class="progress-title">Serve ADHD Learners</div>
+                <div class="progress-text">88% of users say that SparkMind effectively supports individuals with ADHD, addressing their unique needs.</div>
+            </div>
+
+            <!-- Second Progress Circle -->
+            <div class="progress-box">
+                <div class="progress-circle" style="--progress: 94%;">
+                    <span class="progress-value">94%</span>
+                </div>
+                <div class="progress-title">Save Time</div>
+                <div class="progress-text">94% of users say that SparkMind helps them save time by providing focused techniques and time-management tools.</div>
+            </div>
+
+            <!-- Bar Graph Progress -->
+            <div class="progress-box">
+                <div class="progress-bars">
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                    <div class="bar"></div>
+                </div>
+                <div class="progress-title">Drive Results</div>
+                <div class="progress-text">Facilitated a 28% improvement in productivity for users with ADHD, helping them achieve their goals faster.</div>
+            </div>
+
+            <!-- Fourth Progress Circle -->
+            <div class="progress-box">
+                <div class="progress-circle" style="--progress: 95%;">
+                    <span class="progress-value">95%</span>
+                </div>
+                <div class="progress-title">Share the Love</div>
+                <div class="progress-text">95% of users recommend SparkMind to others for its effectiveness in managing ADHD symptoms and enhancing productivity.</div>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        const text = "What is SparkMind?";
+        let i = 0;
+        const speed = 100; // typing speed in ms
+      
+        function typeWriter() {
+          if (i < text.length) {
+            document.getElementById("typed-title").innerHTML += text.charAt(i);
+            i++;
+            setTimeout(typeWriter, speed);
+          }
+        }
+      
+        window.onload = typeWriter;
+      </script>
+      
+    
+</body>
+
+<br /><br /><br /><br />
+    <footer>
+        <p>&copy; 2025 SparkMind. All rights reserved.</p>
+    </footer>
+</html>

@@ -1,0 +1,140 @@
+<!DOCTYPE html> 
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>SparkMind | Login / Signup</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="script3.js" defer></script>
+  <style>
+    .containerl {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 90vh;
+    }
+    .img2 {
+      position: absolute;
+      z-index: 1;
+      width: 700px;
+      opacity: 0.3; /* optional: make the image subtle behind */
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+        }
+
+    .form-box {
+      position: relative;
+      z-index: 2;
+      background-color: rgba(255, 255, 255, 0.95);
+      color: #333;
+      border-radius: 15px;
+      padding: 40px;
+      box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+      width: 350px;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .form-box:hover {
+      transform: translateY(-10px);
+    }
+
+    h2 {
+      text-align: center;
+      margin-bottom: 25px;
+      color: #7F00FF;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+      width: 100%;
+      padding: 12px;
+      margin: 10px 0 5px;
+      border: 1px solid #ccc;
+      border-radius: 8px;
+    }
+
+    .error-message {
+      color: red;
+      font-size: 14px;
+      margin-bottom: 10px;
+      display: none;
+    }
+
+    .btn {
+      width: 100%;
+      padding: 12px;
+      background-color: #7F00FF;
+      color: white;
+      border: none;
+      border-radius: 8px;
+      font-size: 16px;
+      cursor: pointer;
+      transition: background-color 0.3s;
+      margin-top: 10px;
+    }
+
+    .btn:hover {
+      background-color: #5f00cc;
+    }
+
+    .toggle-link {
+      text-align: center;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .toggle-link a {
+      color: #7F00FF;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
+    .toggle-link a:hover {
+      text-decoration: underline;
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="home.html" class="logo">
+      <img src="images/LOGO.png" alt="SparkMind Logo">
+    </a>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="focus.html">Focus Buddy</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="budget.html">Budget</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="habits.html">Habits</a></li>
+      <li><a href="mind.html">mind</a></li>
+      <li><a href="productivity.html">Productivity</a></li>
+    </ul>
+  </nav>
+  <div class="navbar-space"></div>
+
+  <div class="containerl">
+    <div class="form-box">
+      <h2>Login</h2>
+      <form id="loginForm" novalidate>
+        <input type="email" id="email" placeholder="Email">
+        <p class="error-message" id="emailError">Email is required.</p>
+
+        <input type="password" id="password" placeholder="Password">
+        <p class="error-message" id="passwordError">Password is required.</p>
+
+        <button type="submit" class="btn">Login</button>
+      </form>
+      <div class="toggle-link">
+        Don't have an account? <a href="signup.html">Sign up</a>
+      </div>
+    </div>
+    
+      <img class="img2" src="images/login.png" alt="login">
+    
+
+  </div>
+
+ 
+</body>
+</html>

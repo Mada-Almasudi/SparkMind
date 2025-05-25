@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ADHD Hacks & Tips</title>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+  <style>
+    body {
+      transition: background-color 0.5s ease, color 0.5s ease;
+    }
+
+    .container {
+      max-width: 900px;
+      margin: auto;
+      padding: 20px;
+    }
+
+    h1, h2 {
+      color: #f8f7f2;
+      text-shadow: 2px 2px 10px rgba(255, 255, 255, 0.5);
+    }
+
+    .card {
+      background: rgba(255, 255, 255, 0.2);
+      padding: 20px;
+      border-radius: 15px;
+      margin-bottom: 20px;
+      box-shadow: 0px 4px 10px rgba(0,0,0,0.3);
+      width: 100%;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: opacity 0.6s ease, transform 0.6s ease;
+    }
+
+    .card.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+
+    .card:hover {
+      transform: scale(1.02);
+      transition: transform 0.3s ease;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+    }
+
+    th, td {
+      padding: 10px;
+      text-align: left;
+    }
+
+    th {
+      background: #f6ce9e;
+      color: white;
+      border-radius: 5px;
+    }
+
+    td {
+      background: rgba(255, 255, 255, 0.9);
+      color: black;
+    }
+
+    tr:hover td {
+      background-color: #ffeccc;
+    }
+
+    ul, ol {
+      text-align: left;
+    }
+
+    .image-container {
+      text-align: center;
+      margin-top: 20px;
+    }
+
+    .image-container img {
+      width: 80%;
+      max-width: 500px;
+      height: auto;
+      border-radius: 20px;
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="home.html" class="logo">
+      <img src="images/LOGO.png" alt="SparkMind Logo">
+    </a>
+    <ul>
+      <li><a href="home.html">Home</a></li>
+      <li><a href="about_us.html">About Us</a></li>
+      <li><a href="focus.html">Focus Buddy</a></li>
+      <li><a href="tips.html">Tips</a></li>
+      <li><a href="budget.html">Budget</a></li>
+      <li><a href="community.html">Community</a></li>
+      <li><a href="habits.html">Habits</a></li>
+      <li><a href="mind.html">Mind</a></li>
+      <li><a href="productivity.html">Productivity</a></li>
+    </ul>
+  </nav>
+
+  <div class="navbar-space"></div>
+
+  <div class="container">
+    <h1>🌟 ADHD Hacks & Tips – Practical Solutions for a Focused Life</h1>
+
+    <div class="card">
+      <h2>📌 Task Management & Daily Planning</h2>
+      <table>
+        <tr>
+          <th>Hack</th>
+          <th>How It Helps</th>
+        </tr>
+        <tr>
+          <td>Break It Down</td>
+          <td>Large tasks feel overwhelming—split them into smaller, manageable steps.</td>
+        </tr>
+        <tr>
+          <td>The 2-Minute Rule</td>
+          <td>If a task takes less than 2 minutes, do it immediately.</td>
+        </tr>
+        <tr>
+          <td>Pomodoro Technique</td>
+          <td>Work for 25 minutes, then take a 5-minute break to stay focused.</td>
+        </tr>
+        <tr>
+          <td>Plan the Night Before</td>
+          <td>Write down tomorrow’s tasks before bed for a stress-free start.</td>
+        </tr>
+      </table>
+    </div>
+
+    <div class="card">
+      <h2>🛑 Beat Distractions Like a Boss</h2>
+      <ol>
+        <li><strong>Create a Distraction-Free Zone</strong>
+          <ul>
+            <li>Keep your workspace clutter-free.</li>
+            <li>Use noise-canceling headphones or soft background music.</li>
+            <li>Set a dedicated spot for work or study.</li>
+          </ul>
+        </li>
+        <li><strong>Tame Digital Distractions</strong>
+          <ul>
+            <li>Silence notifications while working.</li>
+            <li>Use website blockers like "Forest" or "Cold Turkey."</li>
+            <li>Keep your phone in another room or on airplane mode.</li>
+          </ul>
+        </li>
+        <li><strong>Use Visual Reminders</strong>
+          <ul>
+            <li>Place sticky notes where you’ll see them.</li>
+            <li>Set digital reminders for important tasks.</li>
+          </ul>
+        </li>
+      </ol>
+      <div class="image-container">
+        <img src="images/4.1.png" alt="sparkmind">
+      </div>
+    </div>
+
+    <div class="card">
+      <h2>⏳ Master Time Management</h2>
+      <table>
+        <tr>
+          <th>Strategy</th>
+          <th>Why It Works</th>
+        </tr>
+        <tr>
+          <td>Eat the Frog</td>
+          <td>Tackle the hardest task first to boost confidence and motivation.</td>
+        </tr>
+        <tr>
+          <td>Take Intentional Breaks</td>
+          <td>Regular breaks prevent burnout and improve focus.</td>
+        </tr>
+        <tr>
+          <td>80/20 Rule (Pareto Principle)</td>
+          <td>Focus on the 20% of tasks that bring 80% of the results.</td>
+        </tr>
+        <tr>
+          <td>Prioritization Matrix</td>
+          <td>Sort tasks by urgency and importance for better decision-making.</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <script>
+    // Highlight nav link on hover
+    const navLinks = document.querySelectorAll('nav ul li a');
+    navLinks.forEach(link => {
+      link.addEventListener('mouseover', () => link.style.color = '#f6ce9e');
+      link.addEventListener('mouseout', () => link.style.color = '');
+    });
+
+    // Animate cards on scroll
+    const cards = document.querySelectorAll('.card');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('visible');
+        }
+      });
+    }, {
+      threshold: 0.2
+    });
+
+    cards.forEach(card => observer.observe(card));
+  </script>
+</body>
+</html>

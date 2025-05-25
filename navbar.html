@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title> White Navbar</title>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+
+    <style>
+        /* General Styles */
+        body {
+            margin: 0;
+            font-family: 'Montserrat', sans-serif;
+            background-color: #f8f8f8;
+        }
+
+       /* Navbar Styling */
+nav {
+    background-color: white; /* White background */
+    padding: 10px 20px; /* Add some padding around the navbar */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Add subtle shadow for a floating effect */
+    z-index: 1000;
+}
+
+nav .logo img {
+    height: 40px; /* Adjust logo size */
+    margin-right: 20px;
+}
+
+nav ul {
+    list-style-type: none; /* Remove bullets */
+    padding: 0;
+    margin: 0;
+    display: flex;
+}
+
+nav ul li {
+    margin: 0 15px; /* Space between the menu items */
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333; /* Dark gray text color */
+    font-weight: bold;
+    transition: color 0.3s ease; /* Smooth transition on hover */
+}
+
+nav ul li a:hover {
+    color: #4CAF50; /* Change text color on hover */
+}
+
+    </style>
+</head>
+<body>
+
+    <nav>
+        <a href="home.html" class="logo">
+            <img src="frames content/images/LOGO.png" alt="SparkMind Logo">
+        </a>
+        <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="about_us.html">About Us</a></li>
+            <li><a href="focus.html">Focus Buddy</a></li>
+            <li><a href="tips_content.html">Tips</a></li>
+            <li><a href="budget_content.html">Budget</a></li>
+            <li><a href="community_content.html">Community</a></li>
+        </ul>
+    </nav>
+    
+
+</body>
+</html>
